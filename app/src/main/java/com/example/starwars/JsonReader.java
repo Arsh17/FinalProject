@@ -63,4 +63,7 @@ public class JsonReader {
         JSONObject home = readJsonFromUrl(homeworldurl);
         homeworld = home.get("name").toString();
     }
+    public String getGender() {
+        return gender;
+    }
 }
