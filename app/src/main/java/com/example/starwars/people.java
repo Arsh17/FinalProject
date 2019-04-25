@@ -1,6 +1,8 @@
 package com.example.starwars;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -19,6 +21,7 @@ public class people extends AppCompatActivity {
     public static int score = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        final MediaPlayer gameOverSound = MediaPlayer.create(this, R.raw.chewbaccaroar);
         final Intent intent = new Intent(this, people.class);
         final Intent gameover = new Intent(this, gameoverActivity.class);
         final TextView x = (TextView) findViewById(R.id.score);
@@ -64,6 +67,7 @@ public class people extends AppCompatActivity {
                     public void onClick(View v) {
                         Toast.makeText(people.this, "INCORRECT", Toast.LENGTH_LONG).show();
                         //x.setText(score);
+                        gameOverSound.start();
                         startActivity(gameover);
                     }
                 });
