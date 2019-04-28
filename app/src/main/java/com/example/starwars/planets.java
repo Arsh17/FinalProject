@@ -19,7 +19,7 @@ public class planets extends AppCompatActivity {
 public static int planetscore = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-            final Intent intent = new Intent(this, spaceships.class);
+            final Intent intent = new Intent(this, planets.class);
             final Intent gameover = new Intent(this, gameoverActivity.class);
             Button option1;
             Button option2;
