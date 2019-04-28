@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     public static int highscorepeople = 0;
     public static int highscoreplanets = 0;
     public static int highscorespaceships = 0;
+    public static int rankScore = highscorepeople + highscoreplanets + highscorespaceships;
     private Button people;
     private Button planets;
     private Button spaceships;
@@ -30,6 +31,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         TextView highscore = findViewById(R.id.highscore);
         highscore.setText("High Scores:" + "\n" + "People: " + Integer.toString(highscorepeople) + "\n" + "Spaceships: " + Integer.toString(highscorespaceships) + "\n" + "Planets: " + Integer.toString(highscoreplanets));
+        TextView rank = findViewById(R.id.rank);
+        if (rankScore <= 5) {
+            rank.setText("Jedi Rank: Youngling");
+        } else if (rankScore > 5 && rankScore <= 10) {
+            rank.setText("Jedi Rank: Padawan");
+        } else if (rankScore > 10 && rankScore <= 15) {
+            rank.setText("Jedi Rank: Knight");
+        } else if (rankScore > 15 && rankScore <= 20) {
+            rank.setText("Jedi Rank: Master");
+        } else {
+            rank.setText("Jedi Rank: Grand Master");
+        }
         people = findViewById(R.id.people);
         people.setOnClickListener(new View.OnClickListener() {
             @Override
