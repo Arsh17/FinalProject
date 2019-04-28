@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private Button spaceships;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        //final MediaPlayer rTwodTwo = MediaPlayer.create(this, R.raw.rtwodtwo);
+        final MediaPlayer rTwodTwo = MediaPlayer.create(this, R.raw.rtwodtwo);
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()
                 .permitAll().build();
         StrictMode.setThreadPolicy(policy);
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         people.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //rTwodTwo.start();
+                rTwodTwo.start();
                 openpeople();
                 Individual x = new Individual();
                 x.setName();
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         spaceships.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //rTwodTwo.start();
+                rTwodTwo.start();
                 openspaceships();
             }
         });
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         planets.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //rTwodTwo.start();
+                rTwodTwo.start();
                 openplanets();
             }
         });
@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
     public void openplanets() {
-        Intent intent = new Intent(this, spaceships.class);
+        Intent intent = new Intent(this, planets.class);
         startActivity(intent);
     }
 

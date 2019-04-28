@@ -1,5 +1,7 @@
 package com.example.starwars;
 
+import android.widget.Space;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -16,7 +18,7 @@ public class Spaceship {
     String name;
     String Class;
     Random rand = new Random();
-    int x = rand.nextInt(66) + 2;
+    int x = rand.nextInt(65) + 2;
     String y = Integer.toString(x);
 
     public Spaceship() throws IOException, JSONException {
@@ -50,7 +52,11 @@ public class Spaceship {
         }
         System.out.print("https://swapi.co/api/starships/" + y + "/");
         JSONObject json = readJsonFromUrl("https://swapi.co/api/starships/" + y + "/");
-        name = json.get("starship_class").toString();
+        if (json == null) {
+            Spaceship x = new Spaceship();
+            x.setClass();
+        }
+        name = json.get("name").toString();
         Class = json.get("starship_class").toString();
     }
     public String getclass() {

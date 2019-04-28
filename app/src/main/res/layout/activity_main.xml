@@ -88,7 +88,7 @@
         android:layout_marginBottom="60dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Jedi Rank"
+        android:text="Jedi Rank: Jedi Master"
         android:textColor="@android:color/holo_blue_bright"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toStartOf="@+id/highscore"
