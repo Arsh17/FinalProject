@@ -87,6 +87,24 @@ public class people extends AppCompatActivity {
                     }
                 });
             };
+            if (Character.gender.equals("n/a")) {
+                option1.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Toast.makeText(people.this, "Correct", Toast.LENGTH_LONG).show();
+                        playerscore++;
+                        startActivity(intent);
+                    }
+                });
+                option2.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Toast.makeText(people.this, "Correct", Toast.LENGTH_LONG).show();
+                        playerscore++;
+                        startActivity(intent);
+                    }
+                });
+            };
             if (Character.gender.equals("none")) {
                 option1.setOnClickListener(new View.OnClickListener() {
                     @Override
