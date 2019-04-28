@@ -30,7 +30,7 @@
 
     <Button
         android:id="@+id/people"
-        android:layout_width="wrap_content"
+        android:layout_width="105dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="161dp"
         android:layout_marginLeft="161dp"
@@ -42,7 +42,8 @@
         app:layout_constraintBottom_toTopOf="@+id/spaceships"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.48000002" />
 
     <Button
         android:id="@+id/spaceships"

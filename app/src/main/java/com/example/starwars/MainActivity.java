@@ -1,6 +1,7 @@
 package com.example.starwars;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private Button spaceships;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        final MediaPlayer rTwodTwo = MediaPlayer.create(this, R.raw.rtwodtwo);
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder()
                 .permitAll().build();
         StrictMode.setThreadPolicy(policy);
@@ -32,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         people.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                rTwodTwo.start();
                 openpeople();
                 Individual x = new Individual();
                 x.setName();
@@ -48,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
         spaceships.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                rTwodTwo.start();
                 openspaceships();
             }
         });
@@ -55,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
         planets.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                rTwodTwo.start();
                 openplanets();
             }
         });
