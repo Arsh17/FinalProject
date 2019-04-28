@@ -47,7 +47,7 @@ public class Spaceship {
         if (x == 4 || x == 6 || x == 7 || x == 8 || x == 14 || x == 16 || x == 18 || x == 19 || x == 20 || x == 24 || x == 25 || x == 26 || x == 30 || x == 33 || x == 34 || x == 35 || x == 36 || x == 37 || x == 38 || x == 42 || x == 44 || x == 45 || x == 46 || x == 50 || x == 51 || x == 53 || x == 54 || x == 55 || x == 56 || x == 57 || x == 60 || x == 62) {
             x = 5;
         }
-        System.out.print("https://swapi.co/api/starships/" + y + "/");
+        //System.out.print("https://swapi.co/api/starships/" + y + "/");
         JSONObject json = readJsonFromUrl("https://swapi.co/api/starships/" + y + "/");
         name = json.get("starship_class").toString();
         Class = json.get("starship_class").toString();
