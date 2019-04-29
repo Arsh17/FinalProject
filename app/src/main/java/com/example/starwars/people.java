@@ -135,9 +135,13 @@ public class people extends AppCompatActivity {
             if (correctchoice == 0) {
                 option1.setText(Character.skincolor);
                 possiblechoices.remove(Character.skincolor);
-                option2.setText(possiblechoices.get(randomchoice.nextInt(31)));
-                option3.setText(possiblechoices.get(randomchoice.nextInt(31)));
-                option4.setText(possiblechoices.get(randomchoice.nextInt(31)));
+                int random = randomchoice.nextInt(31);
+                option2.setText(possiblechoices.get(random));
+                possiblechoices.remove(random);
+                int random2 = randomchoice.nextInt(30);
+                option3.setText(possiblechoices.get(random2));
+                possiblechoices.remove(random2);
+                option4.setText(possiblechoices.get(randomchoice.nextInt(29)));
                 option1.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -172,9 +176,13 @@ public class people extends AppCompatActivity {
             if (correctchoice == 1) {
                 option2.setText(Character.skincolor);
                 possiblechoices.remove(Character.skincolor);
-                option1.setText(possiblechoices.get(randomchoice.nextInt(31)));
-                option3.setText(possiblechoices.get(randomchoice.nextInt(31)));
-                option4.setText(possiblechoices.get(randomchoice.nextInt(31)));
+                int random = randomchoice.nextInt(31);
+                option1.setText(possiblechoices.get(random));
+                possiblechoices.remove(random);
+                int random2 = randomchoice.nextInt(30);
+                option3.setText(possiblechoices.get(random2));
+                possiblechoices.remove(random2);
+                option4.setText(possiblechoices.get(randomchoice.nextInt(29)));
                 option2.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -208,9 +216,13 @@ public class people extends AppCompatActivity {
             if (correctchoice == 2) {
                 option3.setText(Character.skincolor);
                 possiblechoices.remove(Character.skincolor);
-                option2.setText(possiblechoices.get(randomchoice.nextInt(31)));
-                option1.setText(possiblechoices.get(randomchoice.nextInt(31)));
-                option4.setText(possiblechoices.get(randomchoice.nextInt(31)));
+                int random = randomchoice.nextInt(31);
+                option2.setText(possiblechoices.get(random));
+                possiblechoices.remove(random);
+                int random2 = randomchoice.nextInt(30);
+                option1.setText(possiblechoices.get(random2));
+                possiblechoices.remove(random2);
+                option4.setText(possiblechoices.get(randomchoice.nextInt(29)));
                 option3.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -244,9 +256,13 @@ public class people extends AppCompatActivity {
             if (correctchoice == 3) {
                 option4.setText(Character.skincolor);
                 possiblechoices.remove(Character.skincolor);
-                option2.setText(possiblechoices.get(randomchoice.nextInt(31)));
-                option3.setText(possiblechoices.get(randomchoice.nextInt(31)));
-                option1.setText(possiblechoices.get(randomchoice.nextInt(31)));
+                int random = randomchoice.nextInt(31);
+                option2.setText(possiblechoices.get(random));
+                possiblechoices.remove(random);
+                int random2 = randomchoice.nextInt(30);
+                option3.setText(possiblechoices.get(random2));
+                possiblechoices.remove(random2);
+                option1.setText(possiblechoices.get(randomchoice.nextInt(29)));
                 option4.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
